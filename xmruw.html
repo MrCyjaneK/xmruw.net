@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>xmruw - Unnamed Monero Wallet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">xmruw.net</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="xmruw.html" class="active">xmruw</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Unnamed Monero Wallet</h1>
+							<span class="image fit"><img src="images/unnamed_monero_wallet_termshot.png" alt="" /></span>
+							<p>Unnamed Monero Wallet is built on cutting edge technology and is made available for many platforms as I can get my hands on.</p>
+							<h2>Features</h2>
+							<ul>
+								<li>All basic wallet features (sending, receiving, transaction history)</li>
+								<li>Tor and I2P support with automatic proxy switching</li>
+								<li>Embedded Tor (android only)</li>
+								<li>Message signing and verification</li>
+								<li>Polyseed support</li>
+								<li>Multiple accounts</li>
+								<li><a href="https://git.mrcyjanek.net/mrcyjanek/libstealth_calculator" target="_blank">Stealth mode</a></li>
+								<li>Pin and password wallet lock</li>
+								<li>Background Sync <a href="https://github.com/monero-project/monero/pull/8619" target="_blank">#8619</a></li>
+								<li>Historically accurate Fiat conversion (without sending any external requests)</li>
+								<li>Offline and view-only mode via URQR (mobile) and text (QubesOS)</li>
+								<li>... and more!</li>
+							</ul>
+							<h2>Downloads</h2>
+							<ul>
+								<li><a href="#android">Android</a></li>
+								<li><a href="#linux">Linux</a></li>
+								<li><a href="#sailfishos">SailfishOS</a></li>
+								<li><a href="#qubesos">QubesOS</a></li>
+							</ul>
+							<h3 id="android">Android</h3>
+							<p>Android builds can be downloaded from <a href="https://static.mrcyjanek.net/unnamed_monero_wallet/">static.mrcyjanek.net</a>. This is an universal build compatible with all android architectures (except for experimental RISC-V).</p>
+							<a href="https://static.mrcyjanek.net/unnamed_monero_wallet/v1.0.0-RC51-5-gd4edd8e/multiarch-android-unknown/app-clean-release.apk" class="button primary">Download</a>
+							<a href="https://static.mrcyjanek.net/unnamed_monero_wallet/v1.0.0-RC51-5-gd4edd8e/multiarch-android-unknown/app-calc-release.apk" class="button">Download (stealth)</a>
+							<h3 id="linux">Linux</h3>
+							<p>Currenty `glibc`-based linux distributions are supported, with repository being available for debian-based systems.</p>
+							<h4>Using tarball or .deb without repository</h4>
+							<a href="https://static.mrcyjanek.net/unnamed_monero_wallet/v1.0.0-RC51-5-gd4edd8e/x86_64-linux-gnu/xmruw.tar.xz" class="button">Download .tar.gz</a>
+							<a href="https://static.mrcyjanek.net/unnamed_monero_wallet/v1.0.0-RC51-5-gd4edd8e/x86_64-linux-gnu/xmruw.deb" class="button">Download .deb</a>
+							<h4>Using .deb depository</h4>
+							<pre><code>apt update
+apt install -y curl apt-transport-https
+sudo curl https://git.mrcyjanek.net/api/packages/mrcyjanek/debian/repository.key -o /etc/apt/keyrings/gitea-mrcyjanek.asc
+echo "deb [signed-by=/etc/apt/keyrings/gitea-mrcyjanek.asc] https://git.mrcyjanek.net/api/packages/mrcyjanek/debian no-distro main" | sudo tee -a /etc/apt/sources.list.d/gitea.list
+sudo apt update
+sudo apt install xmruw</code></pre>
+							<h3 id="sailfishos">SailfishOS</h3>
+							<p>The recommended way is to download the app from OpenRepos (using storeman), however .rpm builds are <a href="https://static.mrcyjanek.net/unnamed_monero_wallet/v1.0.0-RC51-5-gd4edd8e/aarch64-linux-sailfishos/">available here</a>. Currently only aarch64 is supported and for devices running on sailfish older than 4.6 <a href="https://git.mrcyjanek.net/mrcyjanek/flutter-sailfishos/src/branch/master/README.user.md" target="_blank">a manual fix is required</a>.</p>
+							<h4 id="qubesos">QubesOS</h4>
+							<p>xmruw can be used on qubes the same way as on debian or other linux distro, but there is a way to benefit from QubesOS security and to create a secure setup by using offline and online wallet in sebarate qubes.</p>
+							<p>There is a text and video tutorial on how to use QubesOS to create a secure monero wallet setup</p>
+							<ul>
+								<li><a href="https://git.mrcyjanek.net/mrcyjanek/unnamed_monero_wallet/src/branch/master/README.QubesOS.md" target="_blank">Instructions</a> (<a href="https://github.com/mrcyjanek/unnamed_monero_wallet/src/branch/master/README.QubesOS.md" target="_blank">GitHub mirror</a>)</li>
+								<li><a href="assets/videos/qubesos/stage1.mp4" target="_blank">📹 1. Creating xmruw template qube</a></li>
+								<li><a href="assets/videos/qubesos/stage2.mp4" target="_blank">📹 2. Installing xmruw in template qube</a> <a href="https://git.mrcyjanek.net/mrcyjanek/unnamed_monero_wallet/src/branch/master/README.QubesOS.md#template-setup" target="_blank">[commands to copy]</a></li>
+								<li><a href="assets/videos/qubesos/stage3.mp4" target="_blank">📹 3. Creating offlien wallet AppVM</a></li>
+								<li><a href="assets/videos/qubesos/stage4.mp4" target="_blank">📹 4. Creating online wallet AppVM</a></li>
+								<li><a href="assets/videos/qubesos/stage5.mp4" target="_blank">📹 5. Restoring offline and online wallet</a></li>
+								<li><a href="assets/videos/qubesos/stage6.mp4" target="_blank">📹 6. Sending a transaction</a></li>
+							</ul>
+							<p>p.s. there were some visual bugs in the UI, they will get fixed.</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
