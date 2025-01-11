@@ -1,0 +1,344 @@
+body{
+  margin: 0;
+  padding: 0;  
+}
+
+/*----header---- */
+header.header{
+    background-color: rgb(69, 143, 138);
+    width: 100%;
+    margin: 0;
+    padding: 1.75em 2em;
+    display: flex;
+    box-sizing: inherit;
+}
+
+header.header a.title{
+    border: 0;
+    color: #ffffff;
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header a.title:hover{
+    text-decoration: none;
+}
+
+nav{
+    display: block;
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    text-align: right;
+}
+
+header.header nav ul{
+    float: right;
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 2%;
+}
+
+header.header nav ul li{
+    display: inline-block;
+    margin-left: 1.75em;
+    vertical-align: middle;
+}
+
+header.header nav ul li a{
+    border: 0;
+    color: rgba(255, 255, 255, 0.35);
+    display: inline-block;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header.header nav ul li a:hover{
+    color: rgba(221, 221, 221, 0.973);
+    text-decoration: none;
+    transition:1.5s;
+}
+
+header.header nav ul li a.active{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 736px) {
+
+    header {
+        padding: 1em 2em;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+    
+    header.header{
+        display: block;
+        padding: 0 2em;
+        height: 122px;
+        text-align: left;
+    }
+
+    header.header a.title {
+        font-size: 1.4em;
+        padding: 1em 0;
+    }
+
+    header.header nav{
+        border-top: solid 1px rgba(255, 255, 255, 0.15);
+        text-align: inherit;
+    }
+
+    header.header nav ul{
+        float: left;
+        margin-left: 0em;
+        padding-left: 0;
+    }
+
+    header.header nav ul li{
+        display: inline-block;
+        margin-right: 1.5em;
+        margin-left: 0em;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+
+    header.header nav ul li a{
+        height: 5em;
+        line-height: 6em;
+        font-size: 8px;
+    }
+
+    header.header nav ul li a{
+        text-decoration: none;
+        color: rgba(209, 209, 209, 0.875);
+    }
+
+    header.header nav ul li a.active{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+}
+
+
+
+/*----wrapper---- */
+
+div.wrapper{
+   background-color: #1a2933;
+   padding-left: 18em;
+   padding-right: 18em;
+   height: 60vw;
+   padding-bottom: 1vw;
+}
+
+div.head{
+    display: flex;
+    
+}
+
+div.head h1{
+    color: white;
+    padding-top: 5%;
+    margin: 1em 0 1.3em 0;
+    position: relative;
+    padding-bottom:  0.5em;
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 1.5;
+    width: 100%;
+}
+
+div.head h1::after{
+    background: linear-gradient(to right, #2e9692, #b84d50);
+    transition: 0.2s ease;
+    border-radius: 0.2em;
+    bottom: 0;
+    content: '';
+    height: 0.03em;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+    div.wrapper{
+        padding-left: 5em;
+        padding-top: 3.5em;
+        padding-right: 5em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    div.wrapper{
+        padding-top: 0; 
+    }
+}
+
+/*-----oesy------*/
+
+div.container{
+    background-color: #2e9692;
+    border-radius: 1vw;
+    display: flex;
+    margin: 0%;
+    padding: 2%;
+}
+
+div.first_row, div.second_row{
+    display: flex;
+    background-color: #1a2933;
+    width: 50%;
+    padding: 0%;
+}
+
+div.first_row{
+    border-radius: 1vw 0vw 0vw 1vw;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+div.second_row{
+    border-radius: 0vw 1vw 1vw 0vw;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+div.container ul{
+    list-style-type: none;
+    margin: 0%;
+    border-radius: 1vw;
+}
+
+div.container ul li{
+    background-color: #b84d50;
+    display: inline-block;  
+    border-radius: 1vw;  
+}
+
+
+div.container li:hover{
+    background: linear-gradient(to right, #214746, #b84d50);
+}
+
+div.container img{
+    display: flex;
+    height: 8vw;
+    width: auto;
+}
+
+div.container img.wind{
+    width: 8.2vw;
+}
+
+div.container img.linux, img.apple, img.android{
+    padding-left: 12%;
+    padding-top: 5%; 
+}
+
+
+div.container img.wind, img.mcos, img.sailfish{
+    padding-left: 8%;
+    padding-top: 5%; 
+}
+
+
+@media screen and (max-width: 1600px) {
+    div.container img.linux, img.apple, img.android{
+        padding-left: 10%;
+        padding-top: 5%; 
+    }
+    
+    
+    div.container img.mcos, img.sailfish{
+        padding-left: 4%;
+        padding-top: 5%; 
+    }
+
+    div.container img.wind{
+        padding-left: 2.5%;
+        padding-top: 5%; 
+        width: 8.0vw;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    div.container img.linux, img.apple, img.android{
+        padding-left: 6%;
+        padding-top: 5%; 
+    }
+    
+    
+    div.container img.mcos, img.sailfish{
+        padding-left: 1%;
+        padding-top: 5%; 
+    }
+
+    div.container img.wind{
+        padding-left: 0%;
+        padding-top: 5%; 
+        width: 7.7vw;
+    }
+}
+
+
+@media screen and (max-width: 1320px) {
+    div.container img.linux, img.apple, img.android{
+        padding-left: 1%;
+        padding-top: 5%; 
+    }
+    
+    
+    div.container img.mcos, img.sailfish{
+        padding-left: 0%;
+        padding-top: 5%; 
+    }
+
+    div.container img.wind{
+        padding-left:1%;
+        padding-top: 5%; 
+        width: 7.6vw;
+    }
+}
+/*-----stopkaaaaa------*/
+
+
+.fotter{
+    background-color: #2e9692;
+    height: 7.6vw;
+    display: flex;
+}
+
+div.fotter ul{
+    padding-left: 15vw;
+}
+
+div.fotter ul li{
+    display: inline-block;
+    padding-top: 3vw;
+    color: rgba(194, 194, 194, 0.4);
+}
+
+div.fotter ul li a{
+    padding-top: 3vw;
+    color: rgba(194, 194, 194, 0.4);
+     
+}
+
+div.fotter ul li a:hover{
+    padding-top: 3vw;
+    color: rgba(194, 194, 194, 0.8);
+}
